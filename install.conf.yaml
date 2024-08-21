@@ -1,0 +1,27 @@
+- defaults:
+  link:
+    relink: true
+    force: true
+
+- clean: ["~"]
+
+- link:
+    ~/.config/alacritty/alacritty.toml: alacritty.toml
+    ~/.bashrc: bashrc
+    ~/colors.sh: colors.sh
+    ~/.gdbinit: gdbinit
+    ~/.gitconfig: gitconfig_global
+    ~/.gitignore: gitignore_global
+    ~/.inputrc: inputrc
+    ~/.config/nvim: nvim
+    ~/.tmux.conf: tmux.conf
+    ~/utils.sh: utils.sh
+    ~/.vimrc: vimrc
+    ~/.zshrc: zshrc
+
+- create:
+    - ~/.config/alacritty
+    - ~/.config/nvim
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
