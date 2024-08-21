@@ -3,35 +3,15 @@
 	name = Josh Casara
 [core]
 	editor = "nvim"
-	excludesfile = "/home/jcasara/.gitignore"
-	autocrlf = input
+	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
 	pager = diff-so-fancy | less --tabs=4 -RFX
-[diff]
-    tool = vimdiff
-[difftool]
-    prompt = false
-[difftool "vimdiff"]
-	cmd = vim -d \"$LOCAL\" \"$REMOTE\"
-[merge]
-	tool = vimdiff
-[mergetool]
-    prompt = false
-[mergetool "vimdiff"]
-	cmd = vim -d \"$LOCAL\" \"$BASE\" \"$REMOTE\" -c '$wincmd w' -c 'wincmd J'
-
-[alias]
-	d = diff
-	dt = difftool
-	suir = submodule update --init --recursive
-
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-[interactive]
-	diffFilter = diff-so-fancy --patch
+	excludesfile = "~/.gitignore"
+	autocrlf = input
 [color]
+	branch = auto
+	interactive = auto
+	pager = true
+	status = auto
 	ui = true
 [color "diff-highlight"]
 	oldNormal = red bold
@@ -46,5 +26,26 @@
 	old = red bold
 	new = green bold
 	whitespace = red reverse
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[difftool "vimdiff"]
+	cmd = vim -d "$LOCAL" "$REMOTE"
+[mergetool]
+    prompt = false
+[mergetool "vimdiff"]
+	cmd = vim -d "$LOCAL" "$BASE" "$REMOTE" -c '$wincmd w' -c 'wincmd J'
+[alias]
+	dt = difftool
+	suir = submodule update --init --recursive
+	lg = log --graph --pretty=format:'%C(yellow)%h%C(auto)%d%Creset %s %C(white)- %an, %ar%Creset'
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[interactive]
+	diffFilter = diff-so-fancy --patch
 [init]
 	defaultBranch = main
