@@ -1,0 +1,50 @@
+[user]
+	email = jcasara@gmail.com
+	name = Josh Casara
+[core]
+	editor = "nvim"
+	excludesfile = "/home/jcasara/.gitignore"
+	autocrlf = input
+	pager = diff-so-fancy | less --tabs=4 -RFX
+[diff]
+    tool = vimdiff
+[difftool]
+    prompt = false
+[difftool "vimdiff"]
+	cmd = vim -d \"$LOCAL\" \"$REMOTE\"
+[merge]
+	tool = vimdiff
+[mergetool]
+    prompt = false
+[mergetool "vimdiff"]
+	cmd = vim -d \"$LOCAL\" \"$BASE\" \"$REMOTE\" -c '$wincmd w' -c 'wincmd J'
+
+[alias]
+	d = diff
+	dt = difftool
+	suir = submodule update --init --recursive
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+#[interactive]
+#	diffFilter = diff-so-fancy --patch
+[color]
+	ui = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = 11
+	frag = magenta bold
+	func = 146 bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[init]
+	defaultBranch = main
