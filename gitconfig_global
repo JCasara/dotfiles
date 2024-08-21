@@ -29,8 +29,8 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-#[interactive]
-#	diffFilter = diff-so-fancy --patch
+[interactive]
+	diffFilter = diff-so-fancy --patch
 [color]
 	ui = true
 [color "diff-highlight"]
