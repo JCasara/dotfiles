@@ -1,48 +1,13 @@
-# Essential Programs for .dotfiles Setup
-
-# Shell
-- zsh
-  # Install using package manager (Ubuntu)
-  # sudo apt install zsh
-
-# Terminal Multiplexer
-- tmux
-  # Install using package manager (Ubuntu)
-  # sudo apt install tmux
-
-# Git Configuration
-- git
-  # Install using package manager (Ubuntu)
-  # sudo apt install git
-
-# Neovim (Editor)
-- neovim
-  # Install using package manager (Ubuntu)
-  # sudo apt install neovim
-
-# Additional Tools
-- diff-so-fancy
-  # Install manually from GitHub release
-  # Download URL: https://github.com/so-fancy/diff-so-fancy/releases/latest
-  # Example command:
-  # curl -Lo ~/.local/bin/diff-so-fancy https://github.com/so-fancy/diff-so-fancy/releases/latest/download/diff-so-fancy-linux-x86_64
-  # chmod +x ~/.local/bin/diff-so-fancy
-  # Ensure ~/.local/bin is in your PATH
-
-- exa
-  # Install via cargo (Rust package manager)
-  # sudo apt install cargo
-  # cargo install exa
-
-- nerd-fonts
-  # Install manually from GitHub release
-  # Download URL: https://github.com/ryanoasis/nerd-fonts/releases/latest
-  # Example command:
-  # wget -O ~/nerd-fonts.zip https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip
-  # unzip ~/nerd-fonts.zip -d ~/.local/share/fonts/
-  # fc-cache -fv
-
-# Other Scripts
-- install-tools.sh
-  # Script to install additional tools and dependencies
-  # Make sure it is executable: chmod +x install-tools.sh
+alacritty
+bat
+curl
+fzf
+git
+htop
+neovim
+ripgrep
+tmux
+tree
+vivid
+wget
+zsh

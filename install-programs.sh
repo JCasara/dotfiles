@@ -57,34 +57,12 @@ case $PACKAGE_MANAGER in
         ;;
 esac
 
-# Install zsh if not already installed
-if ! command_exists zsh; then
-    echo "Installing zsh..."
-    install_package zsh
-else
-    echo "zsh is already installed."
-fi
-
-# Install tmux if not already installed
-if ! command_exists tmux; then
-    echo "Installing tmux..."
-    install_package tmux
-else
-    echo "tmux is already installed."
-fi
-
-# Install git if not already installed
-if ! command_exists git; then
-    echo "Installing git..."
-    install_package git
-else
-    echo "git is already installed."
-fi
-
-# Install neovim if not already installed
-if ! command_exists nvim; then
-    echo "Installing neovim..."
-    install_package neovim
-else
-    echo "neovim is already installed."
-fi
+# Read the programs.txt file and install packages if not already installed
+while IFS= read -r package; do
+    if ! command_exists "$package"; then
+        echo "Installing $package..."
+        install_package "$package"
+    else
+        echo "$package is already installed."
+    fi
+done < programs.txt

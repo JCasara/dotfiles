@@ -60,10 +60,10 @@ fi
 # Install Nerd Fonts
 FONT_DIR="$HOME/.local/share/fonts"
 NERD_FONTS_VERSION="2.1.0"
-NERD_FONTS_ARCHIVE="JetBrainsMono.zip"
+NERD_FONTS_ARCHIVE="DroidSansMono.zip"
 NERD_FONTS_URL="https://github.com/ryanoasis/nerd-fonts/releases/download/v${NERD_FONTS_VERSION}/${NERD_FONTS_ARCHIVE}"
 
-if [ ! -f "$FONT_DIR/JetBrainsMono Nerd Font Regular.ttf" ]; then
+if [ ! -f "$FONT_DIR/Droid Sans Mono Nerd Font Complete.otf" ]; then
     echo "Installing Nerd Fonts..."
     mkdir -p "$FONT_DIR"
     wget -O "$FONT_DIR/$NERD_FONTS_ARCHIVE" "$NERD_FONTS_URL"
