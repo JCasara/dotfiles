@@ -25,4 +25,5 @@
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
+    - [bash install-programs.sh, Installing necessary programs]
     - [bash install-tools.sh, Installing additional tools]
