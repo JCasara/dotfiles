@@ -8,6 +8,5 @@ neovim
 ripgrep
 tmux
 tree
-vivid
 wget
 zsh

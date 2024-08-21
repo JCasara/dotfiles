@@ -77,4 +77,20 @@ fi
 echo "Refreshing font cache..."
 fc-cache -fv
 
+# Install vivid
+if ! command_exists vivid; then
+    echo "Installing vivid..."
+    
+    # Install Rust and cargo if not present
+    if ! command_exists cargo; then
+        echo "Installing Rust and Cargo..."
+        curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+        source $HOME/.cargo/env
+    fi
+
+    cargo install vivid
+else
+    echo "vivid is already installed."
+fi
+
 echo "Installation complete."
