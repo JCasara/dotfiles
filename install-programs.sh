@@ -66,3 +66,16 @@ while IFS= read -r package; do
         echo "$package is already installed."
     fi
 done < programs.txt
+
+# Install oh-my-zsh
+ZSH_DIR="$HOME/.oh-my-zsh"
+
+# Check if the ZSH directory already exists
+if [ -d "$ZSH_DIR" ]; then
+    echo "Oh My Zsh is already installed in $ZSH_DIR. No action needed."
+else
+    # Run the installation script if the directory does not exist
+    echo "Installing Oh My Zsh..."
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+    echo "Oh My Zsh installation complete."
+fi
