@@ -62,7 +62,7 @@ alias cf='git ls-files --exclude-standard -om \*{.cpp,.h} | xargs -n 1 -P $(npro
 alias cl='cpplint --recursive ./ | grep -Ev "Done processing|Ignoring"'
 
 # Terminal Aliases
-alias cat=bat
+alias cat='bat --theme OneDark'
 alias ls='exa --icons'
 alias tree='exa --tree --level=2 --icons --color=always'
 

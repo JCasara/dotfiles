@@ -94,3 +94,22 @@ else
 fi
 
 echo "Installation complete."
+
+# Install OneDark.tmTheme for bat
+BAT_DIR="$HOME/.config/bat"
+THEME_DIR="$BAT_DIR/themes"
+ONEDARK_URL="https://raw.githubusercontent.com/andresmichel/one-dark-theme/master/One%20Dark.tmTheme"
+
+if [ ! -f "$BAT_DIR/themes/OneDark.tmTheme" ]; then
+    echo "Installing OneDark.tmTheme..."
+    mkdir -p "$THEME_DIR"
+    wget -O "$THEME_DIR/OneDark.tmTheme" "$ONEDARK_URL"
+    if command_exists bat; then
+        echo "Caching OneDark theme to bat build"
+        bat cache --build
+    else
+        echo "bat command not installed."
+    fi
+else
+    echo "OneDark.tmTheme already installed."
+fi
