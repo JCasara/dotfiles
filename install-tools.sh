@@ -126,3 +126,13 @@ if [ ! -f "$SKIN_DIR/dracula256.ini" ]; then
 else
     echo "Dracula skin already installed."
 fi
+
+MC_CONFIG_DIR="$HOME/.config/mc"
+if [ ! -f "$MC_CONFIG_DIR/ini" ]; then
+    echo "Copying mc.ini to $MC_CONFIG_DIR/ini..."
+    mkdir -p "$MC_CONFIG_DIR"
+    cp mc.ini "$MC_CONFIG_DIR/ini"
+else
+    echo "ini file already exists, appending skin text to file"
+    /usr/bin/cat mc.ini >> "$MC_CONFIG_DIR/ini"
+fi

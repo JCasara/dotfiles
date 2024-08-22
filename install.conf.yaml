@@ -13,7 +13,6 @@
     ~/.gitconfig: gitconfig_global
     ~/.gitignore: gitignore_global
     ~/.inputrc: inputrc
-    ~/.config/mc/ini: mc.ini
     ~/.config/nvim: nvim
     ~/.tmux.conf: tmux.conf
     ~/utils.sh: utils.sh
@@ -28,3 +27,4 @@
     - [git submodule update --init --recursive, Installing submodules]
     - [bash install-programs.sh, Installing necessary programs]
     - [bash install-tools.sh, Installing additional tools]
+    - [chsh -s $(which zsh), Making zsh the default shell]
