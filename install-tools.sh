@@ -100,7 +100,7 @@ BAT_DIR="$HOME/.config/bat"
 THEME_DIR="$BAT_DIR/themes"
 ONEDARK_URL="https://raw.githubusercontent.com/andresmichel/one-dark-theme/master/One%20Dark.tmTheme"
 
-if [ ! -f "$BAT_DIR/themes/OneDark.tmTheme" ]; then
+if [ ! -f "$THEME_DIR/OneDark.tmTheme" ]; then
     echo "Installing OneDark.tmTheme..."
     mkdir -p "$THEME_DIR"
     wget -O "$THEME_DIR/OneDark.tmTheme" "$ONEDARK_URL"
@@ -112,4 +112,17 @@ if [ ! -f "$BAT_DIR/themes/OneDark.tmTheme" ]; then
     fi
 else
     echo "OneDark.tmTheme already installed."
+fi
+
+# Install Midnight Commander Dracula Skin
+MC_DIR="$HOME/.local/share/mc"
+SKIN_DIR="$MC_DIR/skins"
+DRACULA_URL="https://raw.githubusercontent.com/dracula/midnight-commander/master/skins/dracula256.ini"
+
+if [ ! -f "$SKIN_DIR/dracula256.ini" ]; then
+    echo "Installing dracula.ini skin..."
+    mkdir -p "$SKIN_DIR"
+    wget -O "$SKIN_DIR/dracula256.ini" "$DRACULA_URL"
+else
+    echo "Dracula skin already installed."
 fi

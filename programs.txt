@@ -4,6 +4,7 @@ curl
 fzf
 git
 htop
+mc
 neovim
 ripgrep
 tmux
