@@ -66,6 +66,9 @@ alias cat='bat --theme OneDark'
 alias ls='exa --icons'
 alias tree='exa --tree --level=2 --icons --color=always'
 
+# Zoxide alias
+alias cd='z'
+
 # ssh banner
 # only executes if SSH_TTY variable is set (i.e. connected via ssh)
 # if [ "x${SSH_TTY}" != "x" ]; then
