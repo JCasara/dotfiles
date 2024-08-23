@@ -31,11 +31,11 @@
 [difftool]
 	prompt = false
 [difftool "vimdiff"]
-	cmd = vim -d "$LOCAL" "$REMOTE"
+	cmd = nvim -d "$LOCAL" "$REMOTE"
 [mergetool]
     prompt = false
 [mergetool "vimdiff"]
-	cmd = vim -d "$LOCAL" "$BASE" "$REMOTE" -c '$wincmd w' -c 'wincmd J'
+	cmd = nvim -d "$LOCAL" "$BASE" "$REMOTE" -c '$wincmd w' -c 'wincmd J'
 [alias]
 	dt = difftool
 	suir = submodule update --init --recursive
