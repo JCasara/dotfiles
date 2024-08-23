@@ -71,8 +71,15 @@ alias cat='bat --theme OneDark'
 alias ls='exa --icons'
 alias tree='exa --tree --level=2 --icons --color=always'
 
-# Zoxide alias
-alias cd='z'
+# Zoxide alias: function to use zshz_cd if attempting to return to previous directory
+# else use zshz
+cd() {
+    if [[ "$1" == "-" ]]; then
+        zshz_cd -
+    else
+        zshz "$@"
+    fi
+}
 
 # ssh banner
 # only executes if SSH_TTY variable is set (i.e. connected via ssh)
