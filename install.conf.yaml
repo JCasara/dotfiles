@@ -5,6 +5,10 @@
 
 - clean: ["~"]
 
+- create:
+    - ~/.config/alacritty
+    - ~/.config/nvim
+
 - link:
     ~/.config/alacritty/alacritty.toml: alacritty.toml
     ~/.bashrc: bashrc
@@ -19,9 +23,6 @@
     ~/.vimrc: vimrc
     ~/.zshrc: zshrc
 
-- create:
-    - ~/.config/alacritty
-    - ~/.config/nvim
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
