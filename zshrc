@@ -30,7 +30,12 @@ export ARCHFLAGS="-arch x86_64"
 
 # https://askubuntu.com/questions/1393204/changing-zsh-autosuggestions-color
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=cyan"
-export LS_COLORS="$(vivid generate molokai)"
+
+# Check if vivid command is available
+if command -v vivid &> /dev/null; then
+    export LS_COLORS="$(vivid generate molokai)"
+fi
+
 export PYTHONBREAKPOINT="web_pdb.set_trace"
 
 # Add cargo to path
@@ -95,7 +100,7 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-conda activate dsic
+conda activate pytorch3dunet
 
 # set core limit to unlimited for debug purposes
 ulimit -c unlimited
