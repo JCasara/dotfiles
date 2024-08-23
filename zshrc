@@ -56,6 +56,7 @@ alias vprofile='$EDITOR ~/.config/nvim'
 alias zprofile='$EDITOR ~/.zshrc'
 alias zrefresh='source ~/.zshrc'
 
+alias vim='nvim'
 alias vimdiff='vim -d'
 alias jup='jupyter notebook 2>/dev/null' 
 
