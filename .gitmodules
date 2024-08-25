@@ -5,3 +5,4 @@
 [submodule "nvim"]
 	path = nvim
 	url = git@github.com:JCasara/neovim_setup.git
+	ignore = dirty
