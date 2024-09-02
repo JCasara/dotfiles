@@ -2,9 +2,9 @@
 # COMMENT THIS IF STATEMENT IF THIS BEHAVIOR
 # IS NOT WANTED
 # Start zsh if it's not already running
-if [ -z "$ZSH_VERSION" ]; then
-    exec zsh
-fi
+# if [ -z "$ZSH_VERSION" ]; then
+#     exec zsh
+# fi
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
