@@ -33,25 +33,24 @@ vi_mode_style.shape = "Beam"
 
 [env]
 TERM = "xterm-256color"
-# TERM = "xterm-kitty"
 
 [font]
 size = 14.0
 
 [font.bold]
-family = "Droid Sans Mono Nerd Font"
+family = "DroidSansMNerdFont"
 style = "Bold"
 
 [font.bold_italic]
-family = "Droid Sans Mono Nerd Font"
+family = "DroidSansMNerdFont"
 style = "Bold Italic"
 
 [font.italic]
-family = "Droid Sans Mono Nerd Font"
+family = "DroidSansMNerdFont"
 style = "Italic"
 
 [font.normal]
-family = "Droid Sans Mono Nerd Font"
+family = "DroidSansMNerdFont"
 style = "Regular"
 
 [font.offset]
